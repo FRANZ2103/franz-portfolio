@@ -15,23 +15,22 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    title:
-      "Let Him Cook  — AI-powered recipe generator — React, Hugging Face API, Tailwind CSS",
+    title: "Let Him Cook  — AI-powered recipe generator",
     description:
       "Turn whatever's in your fridge into a full recipe. Built with React and powered by Llama 3.1 via the Hugging Face Inference API, with dark mode, ingredient pill input, and markdown-rendered recipe output.",
     thumbnail: LHCThumb,
     url: "https://let-him-cook-roan.vercel.app/",
-    tags: ["ReactJS", "MySQL", "Tailwind CSS"],
+    tags: ["ReactJS", "Hugging Face API", "Tailwind CSS"],
     visibility: "live",
   },
   {
-    title: "Recruitment Portal",
+    title: "Bus Transit Ticketing System — PITX — Academic Project",
     description:
-      "An employer-facing recruitment portal with applicant tracking, automated email notifications, and a Python/Django REST API backend, deployed on a cloud environment with CI/CD pipelines.",
+      "A full-featured ticketing and scheduling system inspired by Paranaque Integrated Terminal Exchange operations, demonstrating real-world system design, passenger flow logic, and operational workflow simulation.",
     thumbnail:
       "https://images.unsplash.com/photo-1763718528755-4bca23f82ac3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHx3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZCUyMFVJJTIwc2NyZWVuc2hvdHxlbnwxfHx8fDE3ODA1NTk2Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     url: "#",
-    tags: ["Python", "Django", "REST API"],
+    tags: ["C++", "Qt Framework"],
     visibility: "private",
   },
   {
@@ -186,9 +185,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               overflow: "hidden",
             }}
           >
-            {isPrivate && hovered
+            {/* Disabled isPrivate for now for desc visibility */}
+            {/* {isPrivate && hovered
               ? "This project was built for a private client and is not publicly accessible."
-              : project.description}
+              : project.description} */}
+            {project.description}
           </p>
         </div>
 
